@@ -1,0 +1,22 @@
+---
+import Container from "@components/container.astro";
+import { Image } from "astro:assets";
+import { Astronav, MenuIcon } from "astro-navbar";
+import logoImage from "assets/armored-kernel-logo-circle.png";
+---
+
+<Container>
+  <header class="flex flex-col lg:flex-row justify-between items-center my-5">
+    <Astronav>
+      <div class="flex w-full lg:w-auto items-center justify-between">
+        <a href="/" class="text-4xl">
+          <Image src={logoImage} style="display: inline;" alt="Corn Kernel with Armored Helmet" width="40" height="40" />
+          <span class="font-bold text-slate-800">Armored</span> <span class="text-slate-500">Kernel</span>
+        </a>
+        <div class="block lg:hidden">
+          <MenuIcon class="w-4 h-4 text-gray-800" />
+        </div>
+      </div>
+    </Astronav>
+  </header>
+</Container>
